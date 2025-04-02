@@ -18,6 +18,8 @@ int main() {
     float area1;            //float = variável que armazena pontos flutuantes, ou seja, casas decimais. Usada aqui para armazenar a área da cidade em Km²
     float pib1;             //Armazenar o PIB da cidade em bilhões de reais.
     int pontosTuristicos1;  //Armazenar o número de pontos turísticos.
+    float densidadePopulacional1;
+    float pibPerCapita1;
 
     //Declaração de variáveis para a segunda carta
     char estado2;
@@ -27,6 +29,8 @@ int main() {
     float area2;
     float pib2;
     int pontosTuristicos2;
+    float densidadePopulacional2;
+    float pibPerCapita2;
 
     // Cadastro das Cartas:
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
@@ -54,6 +58,10 @@ int main() {
     printf("Números de Pontos Turísticos: ");
     scanf("%d", &pontosTuristicos1);                    //%d lê número inteiro representando os pontos turísticos.
 
+    //Cálculo das propriedades densidadePopulacional1 e pibPerCapita1
+    densidadePopulacional1 = populacao1 / area1;
+    pibPerCapita1 = (pib1 * 1000000000) / populacao1; //Convertendo PIB para Reais
+
     //Leitura de dados da segunda carta
 
     printf("\nDigite os dados da Carta 2:\n");
@@ -79,6 +87,10 @@ int main() {
     printf("Números de Pontos Turísticos: ");
     scanf("%d", &pontosTuristicos2);
 
+    //Cálculo das propriedades densidadePopulacional2 e pibPerCapita2
+    densidadePopulacional2 = populacao2 / area2;
+    pibPerCapita2 = (pib2 * 1000000000) / populacao2; //Convertendo PIB para Reais
+
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
@@ -90,6 +102,8 @@ int main() {
     printf("Área: %2.f km²\n", area1);                              //%.2f Exibe a área com duas casas decimais.
     printf("PIB: %.2f bilhões de reais\n", pib1);                   //%.2f Exibe o PIB com duas casas decimais.
     printf("Número de pontos Turísticos: %d\n", pontosTuristicos1);
+    printf("Densidade Populacional (hab/km²): %.2f\n", densidadePopulacional1);
+    printf("Pib per Capita (reais): %.2f\n", pibPerCapita1);
 
     //Exibição de dados da segunda carta
 
@@ -101,6 +115,8 @@ int main() {
     printf("Área: %.2f km²\n", area2);
     printf("PIB: %.2f bilhões de reais\n", pib2);
     printf("Número de pontos Turísticos: %d\n", pontosTuristicos2);
+    printf("Densidade Populacional (hab/km²): %.2f\n", densidadePopulacional2);
+    printf("Pib per Capita (reais): %.2f\n", pibPerCapita2);
 
     return 0;
 }
