@@ -49,7 +49,7 @@ int main() {
     scanf(" %[^\n]", nomeCidade1);                      //%[^\n] lê uma string com espaços até a quebra de linha.
 
     printf("População: ");
-    scanf("%d", &populacao1);                           //%d lê um número inteiro representando a população.
+    scanf("%lu", &populacao1);                           //%d lê um número inteiro representando a população.
 
     printf("Área (em km²): ");
     scanf("%f", &area1);                                //%f lê um número decimal representando a área.
@@ -81,7 +81,7 @@ int main() {
     scanf(" %[^\n]", nomeCidade2);
 
     printf("População: ");
-    scanf("%d", &populacao2);
+    scanf("%lu", &populacao2);
 
     printf("Área (em km²): ");
     scanf("%f", &area2);
